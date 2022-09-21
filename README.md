@@ -1,1 +1,1 @@
-# -pg-dm121-pokedex
+Pokedex application for 1° geração
