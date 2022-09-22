@@ -34,7 +34,6 @@
 .pokemon-card {
   position: relative;
   width: 250px;
-  border: 1px solid #ffffff;
   border-radius: 10px;
   overflow: hidden;
   margin-bottom: 30px;

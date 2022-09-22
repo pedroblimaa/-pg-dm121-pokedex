@@ -21,9 +21,6 @@ const sortPokemon = (sortValue, sortBy, cardClass) => {
 
   const pokemonCards = document.querySelectorAll('.pokemon-card')
 
-  console.log(sortValue, sortBy)
-
-
   const pokemonContainer = document.getElementById('pokemon-container')
   const pokemonCardsArray = Array.from(pokemonCards)
   const sortedPokemonCards = pokemonCardsArray.sort((a, b) => {
