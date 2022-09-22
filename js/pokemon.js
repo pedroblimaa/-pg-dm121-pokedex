@@ -1,30 +1,46 @@
-const generatePokemonUlrs = () => {
-  const pokemonUrl = 'https://pokeapi.co/api/v2/pokemon/'
-  const urls = []
+const searchPokemon = (event) => {
+  const searchValue = event.target.value.toLowerCase()
+  const pokemonCards = document.querySelectorAll('.pokemon-card')
 
-  for (let i = 1; i < 151; i++) {
-    urls.push(pokemonUrl + i)
+  pokemonCards.forEach((card) => {
+    displayOnlySearched(card, searchValue)
+  })
+}
+
+const displayOnlySearched = (card, searchValue) => {
+  const pokemonName = card.querySelector('.name').innerText.toLowerCase()
+  if (pokemonName.includes(searchValue)) {
+    card.style.display = 'block'
+  } else {
+    card.style.display = 'none'
   }
-
-  return urls
 }
 
-const getPokemons = async (index = 1) => {
-  const pokemonUrls = generatePokemonUlrs()
+const sortPokemon = (sortValue, sortBy, cardClass) => {
 
-  const promises = pokemonUrls.map(url => fetch(url).then(res => res.json()))
-  const pokemons = await Promise.all(promises)
 
-  return pokemons
+  const pokemonCards = document.querySelectorAll('.pokemon-card')
+
+  const pokemonContainer = document.getElementById('pokemon-container')
+  const pokemonCardsArray = Array.from(pokemonCards)
+  const sortedPokemonCards = pokemonCardsArray.sort((a, b) => {
+    const pokemonA = a.querySelector('.' + cardClass).innerText.toLowerCase()
+    const pokemonB = b.querySelector('.' + cardClass).innerText.toLowerCase()
+    if (pokemonA < pokemonB) {
+      return -1
+    }
+    if (pokemonA > pokemonB) {
+      return 1
+    }
+    return 0
+  })
+  if (sortValue === 'desc') {
+    sortedPokemonCards.reverse()
+  }
+  pokemonContainer.innerHTML = ''
+  pokemonContainer.append(...sortedPokemonCards)
 }
 
-const generatePokemonCards = async () => {
-  const pokemons = await getPokemons()
-  const pokemonCards = pokemons.map(pokemon => createCard(pokemon))
-
-  console.log(pokemons)
-
-  document.getElementById('pokemon-container').append(...pokemonCards)
-}
-
-generatePokemonCards()
+document.getElementById('input-search').addEventListener('keyup', function (event) {
+  searchPokemon(event)
+})
