@@ -9,13 +9,14 @@
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/header.css">
     <link rel="stylesheet" href="style/pokemon-container.css">
+    <link rel="stylesheet" href="style/detail.css">
     <script src="https://kit.fontawesome.com/1828b82998.js" crossorigin="anonymous"></script>
     <title>Pokédex</title>
 </head>
 
 <body>
     <div class="container">
-        <section class="header">
+        <section class="main-header">
             <div class="sort-row">
                 <div class="title">
                     <img class="pokeball-icon" src="assets/poke-ball.svg" alt="Pokeball">
@@ -46,10 +47,112 @@
                 </div>
             </div>
         </section>
-        <section id="pokemon-container">
+        <section class="pokemons">
+            <ul id="pokemon-container"></ul>
+        </section>
+        <section id="detail" class="detail-container hide">
+
+
+            <div id="detail-card" class="detail-card grass">
+                <div class="header">
+                    <div class="title-section">
+                        <button id="return-btn">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <h1 id="title">Bulbasaur</h1>
+                    </div>
+                    <p class="number">#001</p>
+                </div>
+                <img class="pokeball-icon" src="assets/poke-ball.svg" alt="Pokeball">
+                <div class="detail-card-info">
+                    <div class="pokemon-img-container">
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png"
+                            alt="bulbasaur">
+                    </div>
+                    <ul class="types">
+                        <li class="grass">Grass</li>
+                        <li class="poison">Poison</li>
+                    </ul>
+                    <h3 class="text-colored">About</h2>
+                        <ul class="char">
+                            <li>
+                                <div class="value">
+                                    <i class="fas fa-weight"></i>
+                                    <p>6,9 kg</p>
+                                </div>
+                                <p class="char-name">Weight</p>
+                            </li>
+                            <li>
+
+                                <div class="value">
+                                    <i class="fas fa-ruler-vertical"></i>
+                                    <p>0,7 m</p>
+                                </div>
+                                <p class="char-name">Height</p>
+                            </li>
+                            <li>
+                                <p>Overgrow</p>
+                                <p class="char-name">Moves</p>
+                            </li>
+                        </ul>
+                        <p class="description">
+                            Bulbasaur can be seen napping in bright sunlight. There is a seed on its back. By soaking up
+                            the
+                            sun's
+                            rays, the seed grows progressively larger.
+                        </p>
+                        <ul class="stats">
+                            <li>
+                                <p class="stat-name">HP</p>
+                                <p class="stat-value">045</p>
+                                <div class="progress-bar">
+                                    <div class="progress-fill"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <p class="stat-name">ATK</p>
+                                <p class="stat-value">045</p>
+                                <div class="progress-bar">
+                                    <div class="progress-fill"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <p class="stat-name">DEF</p>
+                                <p class="stat-value">045</p>
+                                <div class="progress-bar">
+                                    <div class="progress-fill"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <p class="stat-name">SATK</p>
+                                <p class="stat-value">045</p>
+                                <div class="progress-bar">
+                                    <div class="progress-fill"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <p class="stat-name">SDEF</p>
+                                <p class="stat-value">045</p>
+                                <div class="progress-bar">
+                                    <div class="progress-fill"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <p class="stat-name">SPD</p>
+                                <p class="stat-value">045</p>
+                                <div class="progress-bar">
+                                    <div class="progress-fill"></div>
+                                </div>
+                            </li>
+                        </ul>
+
+                </div>
+
+            </div>
         </section>
     </div>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="js/detail.js"></script>
     <script src="js/card.js"></script>
     <script src="js/pokemonApi.js"></script>
     <script src="js/pokemon.js"></script>
