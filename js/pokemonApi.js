@@ -1,3 +1,5 @@
+let pokemonCardInfos = []
+
 const generatePokemonUrls = () => {
   const pokemonUrl = 'https://pokeapi.co/api/v2/pokemon/'
   const urls = []
@@ -24,7 +26,8 @@ const generatePokemonCards = async () => {
 
   document.getElementById('pokemon-container').append(...pokemonCards)
 
-  detailListenClick()
+  pokemonCardInfos = pokemons
+  detailListenClick(pokemons)
 }
 
 generatePokemonCards()

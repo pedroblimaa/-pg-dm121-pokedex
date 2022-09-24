@@ -29,6 +29,7 @@
 .detail-card .header .title-section {
   display: flex;
   align-items: center;
+  text-transform: capitalize;
 }
 
 .title-section #return-btn {
