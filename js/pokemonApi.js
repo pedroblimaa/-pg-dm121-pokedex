@@ -23,6 +23,8 @@ const generatePokemonCards = async () => {
   const pokemonCards = pokemons.map(pokemon => createCard(pokemon))
 
   document.getElementById('pokemon-container').append(...pokemonCards)
+
+  detailListenClick()
 }
 
 generatePokemonCards()

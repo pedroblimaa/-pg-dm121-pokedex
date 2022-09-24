@@ -1,8 +1,8 @@
-.header {
+.main-header {
   margin-bottom: 40px;
 }
 
-.header .sort-row {
+.main-header .sort-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
