@@ -5,14 +5,13 @@ let pokemonInfos = []
 
 const showDetail = (card) => {
   const pokemon = getPokemonFromCard(card)
-  console.log(pokemon)
 
   createDetailCard(pokemon)
 
-  console.log('create')
-
   detail.classList.remove('hide')
   detail.classList.add('show-flex')
+
+  document.body.style.overflow = 'hidden'
 }
 
 const getPokemonFromCard = (card) => {
@@ -26,6 +25,8 @@ const getPokemonFromCard = (card) => {
 const hideDetail = () => {
   detail.classList.remove('show-flex')
   detail.classList.add('hide')
+
+  document.body.style.overflow = 'scroll'
 }
 
 const detailListenClick = (pokemons) => {
@@ -45,4 +46,4 @@ detail.addEventListener('click', (event) => {
   }
 })
 
-export default detailListenClick
+export default { detailListenClick, hideDetail }

@@ -1,17 +1,24 @@
-const detailCard = document.getElementById('detail-card')
+import detailJS from './detail.js'
+
+const detail = document.getElementById('detail')
 
 const createDetailCard = (pokemon) => {
   const type = pokemon.types[0].type.name
 
-  detailCard.innerHTML = `
+  detail.innerHTML = `
                         <div id="detail-card" class="detail-card ${type}">
                         ${getDetailCardHeader(pokemon)}
                         <img class="pokeball-icon" src="assets/poke-ball.svg" alt="Pokeball">
                         ${getDetailCardInfo(pokemon)}
                         </div>
                         `
-}
 
+  const returnBtn = document.getElementById('return-btn')
+
+  returnBtn.addEventListener('click', () => {
+    detailJS.hideDetail()
+  })
+}
 
 const getDetailCardHeader = (pokemon) => {
   const name = pokemon.name
@@ -139,8 +146,7 @@ const getDetailCardAllStats = (pokemon) => {
 }
 
 const getDetailCardStats = (statName, statValue) => {
-    const fillValue = statValue / 2
-
+  const fillValue = statValue / 2
 
   return `
             <li>

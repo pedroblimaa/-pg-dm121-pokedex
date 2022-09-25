@@ -72,9 +72,6 @@ sortDropdown.addEventListener('click', (event) => {
 })
 
 document.addEventListener('click', (event) => {
-  console.log(event.target)
-  console.log(sortArrow)
-
   if (clickIsOnBtn(event)) {
     sortDropdown.classList.remove('show')
     sortDropdown.classList.add('hide')

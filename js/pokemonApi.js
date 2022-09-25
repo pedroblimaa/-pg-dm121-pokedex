@@ -1,4 +1,4 @@
-import detailListenClick from './detailCard/detail.js'
+import detail from './detailCard/detail.js'
 
 let pokemonCardInfos = []
 
@@ -29,7 +29,7 @@ const generatePokemonCards = async () => {
   document.getElementById('pokemon-container').append(...pokemonCards)
 
   pokemonCardInfos = pokemons
-  detailListenClick(pokemons)
+  detail.detailListenClick(pokemons)
 }
 
 generatePokemonCards()
