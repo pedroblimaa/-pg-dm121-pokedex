@@ -1,1 +1,1 @@
-Pokedex application for 1° geração
+Pokedex application for 1° generation
