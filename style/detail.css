@@ -17,6 +17,7 @@
   background-color: #ffffff;
   border-radius: 10px;
   overflow: hidden;
+  background-color: var(--poke-color);
 }
 
 .detail-card .header {
@@ -166,20 +167,23 @@
 
 .detail-card-info .stats li {
   display: flex;
-  margin: 5px 0;
   align-items: center;
 }
 
 .detail-card-info .stats li .stat-name {
   width: 50px;
-  padding-right: 20px;
+  padding-right: 10px;
+  padding-top: 5px;
   font-size: 0.9rem;
   color: rgba(255, 255, 255, 0.7);
   text-align: end;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .detail-card-info .stats li .stat-value {
-  margin-right: 20px;
+  width: 50px;
+  margin-right: 10px;
+  margin-left: 10px;
 }
 
 .detail-card-info .stats li .progress-bar {
@@ -188,155 +192,16 @@
   background-color: rgba(120, 200, 80, 0.3);
   border-radius: 10px;
   overflow: hidden;
+  background-color: var(--poke-color-transparent);
 }
 
 .detail-card-info .stats li .progress-bar .progress-fill {
   height: 100%;
   width: 50%;
-  background-color: var(--grass-color);
   border-radius: 10px;
-}
-
-.detail-container .grass {
-  background-color: var(--grass-color);
+  background-color: var(--poke-color);
 }
 
 .detail-container .text-colored {
-  color: var(--grass-color);
-}
-
-.detail-container .fire {
-  background-color: var(--fire-color);
-}
-
-.detail-container .fire .text-colored {
-  color: var(--fire-color);
-}
-
-.detail-container .water {
-  background-color: var(--water-color);
-}
-
-.detail-container .water .text-colored {
-  color: var(--water-color);
-}
-
-.detail-container .electric {
-  background-color: var(--electric-color);
-}
-
-.detail-container .electric .text-colored {
-  color: var(--electric-color);
-}
-
-.detail-container .bug {
-  background-color: var(--bug-color);
-}
-
-.detail-container .bug .text-colored {
-  color: var(--bug-color);
-}
-
-.detail-container .normal {
-  background-color: var(--normal-color);
-}
-
-.detail-container .normal .text-colored {
-  color: var(--normal-color);
-}
-
-.detail-container .flying {
-  background-color: var(--flying-color);
-}
-
-.detail-container .flying .text-colored {
-  color: var(--flying-color);
-}
-
-.detail-container .poison {
-  background-color: var(--poison-color);
-}
-
-.detail-container .poison .text-colored {
-  color: var(--poison-color);
-}
-
-.detail-container .ground {
-  background-color: var(--ground-color);
-}
-
-.detail-container .ground .text-colored {
-  color: var(--ground-color);
-}
-
-.detail-container .fairy {
-  background-color: var(--fairy-color);
-}
-
-.detail-container .fairy .text-colored {
-  color: var(--fairy-color);
-}
-
-.detail-container .fighting {
-  background-color: var(--fighting-color);
-}
-
-.detail-container .fighting .text-colored {
-  color: var(--fighting-color);
-}
-
-.detail-container .psychic {
-  background-color: var(--psychic-color);
-}
-
-.detail-container .psychic .text-colored {
-  color: var(--psychic-color);
-}
-
-.detail-container .rock {
-  background-color: var(--rock-color);
-}
-
-.detail-container .rock .text-colored {
-  color: var(--rock-color);
-}
-
-.detail-container .ghost {
-  background-color: var(--ghost-color);
-}
-
-.detail-container .ghost .text-colored {
-  color: var(--ghost-color);
-}
-
-.detail-container .ice {
-  background-color: var(--ice-color);
-}
-
-.detail-container .ice .text-colored {
-  color: var(--ice-color);
-}
-
-.detail-container .dragon {
-  background-color: var(--dragon-color);
-}
-
-.detail-container .dragon .text-colored {
-  color: var(--dragon-color);
-}
-
-.detail-container .dark {
-  background-color: var(--dark-color);
-}
-
-.detail-container .dark .text-colored {
-  color: var(--dark-color);
-}
-
-.detail-container .steel {
-  background-color: var(--steel-color);
-}
-
-.detail-container .steel .text-colored {
-  color: var(--steel-color);
+  color: var(--poke-color);
 }

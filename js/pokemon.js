@@ -23,9 +23,21 @@ const sortPokemon = (sortValue, sortBy, cardClass) => {
 
   const pokemonContainer = document.getElementById('pokemon-container')
   const pokemonCardsArray = Array.from(pokemonCards)
-  const sortedPokemonCards = pokemonCardsArray.sort((a, b) => {
+
+  const sortedPokemonCards = getSortedPokemons(pokemonCardsArray, cardClass)
+
+  if (sortValue === 'desc') {
+    sortedPokemonCards.reverse()
+  }
+  pokemonContainer.innerHTML = ''
+  pokemonContainer.append(...sortedPokemonCards)
+}
+
+const getSortedPokemons = (pokemonCardsArray, cardClass) => {
+  return pokemonCardsArray.sort((a, b) => {
     const pokemonA = a.querySelector('.' + cardClass).innerText.toLowerCase()
     const pokemonB = b.querySelector('.' + cardClass).innerText.toLowerCase()
+
     if (pokemonA < pokemonB) {
       return -1
     }
@@ -34,11 +46,6 @@ const sortPokemon = (sortValue, sortBy, cardClass) => {
     }
     return 0
   })
-  if (sortValue === 'desc') {
-    sortedPokemonCards.reverse()
-  }
-  pokemonContainer.innerHTML = ''
-  pokemonContainer.append(...sortedPokemonCards)
 }
 
 document.getElementById('input-search').addEventListener('keyup', function (event) {

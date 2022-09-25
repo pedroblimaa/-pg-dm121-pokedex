@@ -1,3 +1,5 @@
+import detailListenClick from './detailCard/detail.js'
+
 let pokemonCardInfos = []
 
 const generatePokemonUrls = () => {
@@ -14,7 +16,7 @@ const generatePokemonUrls = () => {
 const getPokemons = async () => {
   const pokemonUrls = generatePokemonUrls()
 
-  const promises = pokemonUrls.map(url => fetch(url).then(res => res.json()))
+  const promises = pokemonUrls.map((url) => fetch(url).then((res) => res.json()))
   const pokemons = await Promise.all(promises)
 
   return pokemons
@@ -22,7 +24,7 @@ const getPokemons = async () => {
 
 const generatePokemonCards = async () => {
   const pokemons = await getPokemons()
-  const pokemonCards = pokemons.map(pokemon => createCard(pokemon))
+  const pokemonCards = pokemons.map((pokemon) => createCard(pokemon))
 
   document.getElementById('pokemon-container').append(...pokemonCards)
 

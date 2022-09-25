@@ -84,3 +84,92 @@ body {
     width: 550px;
   }
 }
+
+.grass {
+  --poke-color: #78c850;
+  --poke-color-transparent: rgba(120, 200, 80, 0.2);
+}
+
+.fire {
+  --poke-color: #f08030;
+  --poke-color-transparent: rgba(240, 128, 48, 0.2);
+}
+
+.water {
+  --poke-color: #6890f0;
+  --poke-color-transparent: rgba(104, 144, 240, 0.2);
+}
+
+.electric {
+  --poke-color: #f8d030;
+  --poke-color-transparent: rgba(248, 208, 48, 0.2);
+}
+
+.ice {
+  --poke-color: #98d8d8;
+  --poke-color-transparent: rgba(152, 216, 216, 0.2);
+}
+
+.fighting {
+  --poke-color: #c03028;
+  --poke-color-transparent: rgba(192, 48, 40, 0.2);
+}
+
+.poison {
+  --poke-color: #a040a0;
+  --poke-color-transparent: rgba(160, 64, 160, 0.2);
+}
+
+.ground {
+  --poke-color: #e0c068;
+  --poke-color-transparent: rgba(224, 192, 104, 0.2);
+}
+
+.flying {
+  --poke-color: #a890f0;
+  --poke-color-transparent: rgba(168, 144, 240, 0.2);
+}
+
+.psychic {
+  --poke-color: #f85888;
+  --poke-color-transparent: rgba(248, 88, 136, 0.2);
+}
+
+.bug {
+  --poke-color: #a8b820;
+  --poke-color-transparent: rgba(168, 184, 32, 0.2);
+}
+
+.rock {
+  --poke-color: #b8a038;
+  --poke-color-transparent: rgba(184, 160, 56, 0.2);
+}
+
+.ghost {
+  --poke-color: #705898;
+  --poke-color-transparent: rgba(112, 88, 152, 0.2);
+}
+
+.dragon {
+  --poke-color: #7038f8;
+  --poke-color-transparent: rgba(112, 56, 248, 0.2);
+}
+
+.dark {
+  --poke-color: #705848;
+  --poke-color-transparent: rgba(112, 88, 72, 0.2);
+}
+
+.steel {
+  --poke-color: #b8b8d0;
+  --poke-color-transparent: rgba(184, 184, 208, 0.2);
+}
+
+.fairy {
+  --poke-color: #ee99ac;
+  --poke-color-transparent: rgba(238, 153, 172, 0.2);}
+
+.normal {
+  --poke-color: #a8a878;
+  --poke-color-transparent: rgba(168, 168, 120, 0.2);
+}

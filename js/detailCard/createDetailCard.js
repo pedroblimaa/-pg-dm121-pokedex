@@ -1,40 +1,4 @@
-const detail = document.getElementById('detail')
 const detailCard = document.getElementById('detail-card')
-let pokemonInfos = []
-
-const showDetail = (card) => {
-  const pokemon = getPokemonFromCard(card)
-  console.log(pokemon)
-
-  createDetailCard(pokemon)
-
-  detail.classList.remove('hide')
-  detail.classList.add('show-flex')
-}
-
-const getPokemonFromCard = (card) => {
-  const numberText = card.querySelector('.number').innerText
-  const number = numberText.split('#')
-  const id = parseInt(number[1])
-
-  return pokemonInfos[id - 1]
-}
-
-const hideDetail = () => {
-  detail.classList.remove('show-flex')
-  detail.classList.add('hide')
-}
-
-const detailListenClick = (pokemons) => {
-  const cards = document.querySelectorAll('.pokemon-card')
-  pokemonInfos = pokemons
-
-  cards.forEach((card) => {
-    card.addEventListener('click', () => {
-      showDetail(card)
-    })
-  })
-}
 
 const createDetailCard = (pokemon) => {
   const type = pokemon.types[0].type.name
@@ -47,6 +11,7 @@ const createDetailCard = (pokemon) => {
                         </div>
                         `
 }
+
 
 const getDetailCardHeader = (pokemon) => {
   const name = pokemon.name
@@ -174,19 +139,18 @@ const getDetailCardAllStats = (pokemon) => {
 }
 
 const getDetailCardStats = (statName, statValue) => {
+    const fillValue = statValue / 2
+
+
   return `
             <li>
             <p class="stat-name">${statName}</p>
             <p class="stat-value">${statValue}</p>
             <div class="progress-bar">
-                <div class="progress-fill"></div>
+                <div class="progress-fill" style="width: ${fillValue}%"></div>
             </div>
             </li>
             `
 }
 
-detail.addEventListener('click', (event) => {
-  if (event.target === detail) {
-    hideDetail(event)
-  }
-})
+export default createDetailCard
