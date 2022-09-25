@@ -1,8 +1,6 @@
 import createDetailCard from './createDetailCard.js'
 
-
 const detail = document.getElementById('detail')
-const detailCard = document.getElementById('detail-card')
 let pokemonInfos = []
 
 const showDetail = (card) => {

@@ -25,6 +25,7 @@ const sortBtn = document.getElementById('sort-btn')
 const sortDropdown = document.getElementById('sort-dropdown')
 const sortIcon = document.getElementById('sort-icon')
 const sortArrow = document.getElementById('sort-arrow')
+const sortArrowIcon = document.getElementById('sort-arrow-icon')
 
 const toggleShowDropdown = (event) => {
   const sortBy = handleSortType(event)
@@ -52,12 +53,12 @@ const handleSortType = (event) => {
 const handleSortOrder = (sortBy) => {
   if (sortBy.CLASS === currentSortBy) {
     currentSortOrder = currentSortOrder === ORDER_ASC ? ORDER_DESC : ORDER_ASC
-    sortArrow.className = currentSortOrder === ORDER_ASC ? ICON_ASC : ICON_DESC
+    sortArrowIcon.className = currentSortOrder === ORDER_ASC ? ICON_ASC : ICON_DESC
     return currentSortOrder
   } else {
     currentSortBy = sortBy.CLASS
     sortIcon.className = sortBy.ICON_CLASS
-    sortArrow.className = ICON_ASC
+    sortArrowIcon.className = ICON_ASC
     return ORDER_ASC
   }
 }
@@ -69,3 +70,23 @@ sortBtn.addEventListener('click', (event) => {
 sortDropdown.addEventListener('click', (event) => {
   toggleShowDropdown(event)
 })
+
+document.addEventListener('click', (event) => {
+  console.log(event.target)
+  console.log(sortArrow)
+
+  if (clickIsOnBtn(event)) {
+    sortDropdown.classList.remove('show')
+    sortDropdown.classList.add('hide')
+  }
+})
+
+const clickIsOnBtn = (event) => {
+  return (
+    event.target !== sortBtn &&
+    event.target !== sortDropdown &&
+    event.target !== sortIcon &&
+    event.target !== sortArrow &&
+    event.target !== sortArrowIcon
+  )
+}
